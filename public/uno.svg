@@ -1,0 +1,15 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Red Ellipse Background -->
+  <ellipse cx="150" cy="100" rx="140" ry="80" fill="#D00000" stroke="black" stroke-width="5"/>
+
+  <!-- UNO Text -->
+  <text x="150" y="125"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="80"
+        font-weight="bold"
+        fill="#FFD700"
+        text-anchor="middle"
+        transform="rotate(-15 150 125)">
+    UNO
+  </text>
+</svg>
