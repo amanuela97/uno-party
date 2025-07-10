@@ -1,5 +1,7 @@
 # 🎮 UNO Multiplayer Game
 
+live - [UNO-PARTY](https://uno-party.vercel.app/uno/lucid)
+
 A real-time multiplayer UNO card game built with Next.js and PartyKit. Play the classic card game with friends online with smooth animations and real-time synchronization.
 
 ![UNO Game](public/uno.svg)
