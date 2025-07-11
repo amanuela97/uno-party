@@ -453,7 +453,6 @@ export default function GamePage({ params }: GamePageProps) {
                 onClick={handleCopyRoom}
                 variant="outline"
                 className="flex items-center gap-2"
-                disabled={isRoomFull}
               >
                 {copySuccess ? (
                   <Share2 className="w-4 h-4" />
@@ -466,13 +465,13 @@ export default function GamePage({ params }: GamePageProps) {
               {!gameState?.started && (
                 <Button
                   onClick={handleReady}
-                  disabled={currentPlayerData?.ready || isRoomFull}
+                  disabled={currentPlayerData?.ready}
                 >
                   {currentPlayerData?.ready ? '✓ Ready' : 'Ready Up'}
                 </Button>
               )}
 
-              {isFirstPlayer && canStartGame && !isRoomFull && (
+              {isFirstPlayer && canStartGame && (
                 <Button
                   onClick={handleStartGame}
                   className="bg-green-600 hover:bg-green-700"

@@ -197,15 +197,6 @@ export default class Server implements Party.Server {
         }
 
         case 'ready': {
-          if (state.players.length >= MAX_PLAYERS) {
-            return sender.send(
-              JSON.stringify({
-                type: 'error',
-                message: 'Room is full, cannot ready up',
-              })
-            )
-          }
-
           const player = state.players.find((p) => p.id === sender.id)
           if (!player) {
             return sender.send(
@@ -224,15 +215,6 @@ export default class Server implements Party.Server {
               JSON.stringify({
                 type: 'error',
                 message: 'Need at least 2 players',
-              })
-            )
-          }
-
-          if (state.players.length >= MAX_PLAYERS) {
-            return sender.send(
-              JSON.stringify({
-                type: 'error',
-                message: 'Room is full, cannot start game',
               })
             )
           }
